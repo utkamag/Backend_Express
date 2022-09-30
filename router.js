@@ -6,9 +6,9 @@ const router = new Router()
 
 router.post('/post', PostController.create)
 
-router.get('/post')
-router.get('/post/:id')
-router.put('/post')
-router.delete('/post:id')
+router.get('/post', PostController.getAll)
+router.get('/post/:id', PostController.getOne)
+router.put('/post', PostController.update)
+router.delete('/post:id', PostController.delete)
 
 export default router;
